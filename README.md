@@ -65,7 +65,8 @@ Sealed moves are withheld from every contract view while a round is in progress,
 ```ini
 live      = https://hichamslimani.github.io/stratagem/
 network   = GenLayer Bradbury Testnet
-contract  = TBD (set by the parent after deployment)
+contract  = 0x9f455597d35bEdF37AAbfBE63026cEb6cBde8de8
+deploy_tx = 0xfd307c4fb9b3c55271938739b288d39f41bfaeb10cc97543e2aee1261c393f7b
 explorer  = https://explorer-bradbury.genlayer.com
 faucet    = https://testnet-faucet.genlayer.foundation/
 ```
