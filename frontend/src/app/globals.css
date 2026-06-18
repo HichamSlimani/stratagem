@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background-color: #0e0e12;
+  color: #e9e9f2;
+}
+
+body {
+  /* dark charcoal grid backdrop split by a faint center seam */
+  background-image:
+    linear-gradient(rgba(44, 230, 230, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 61, 166, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at 50% 0%, rgba(255, 226, 61, 0.06), transparent 55%);
+  background-size: 44px 44px, 44px 44px, 100% 100%;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(255, 226, 61, 0.3);
+  color: #fff;
+}
+
+/* thin neon scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0e0e12;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2ce6e6, #ff3da6);
+  border-radius: 999px;
+  border: 2px solid #0e0e12;
+}
+
+@layer utilities {
+  .text-stroke-p1 {
+    -webkit-text-stroke: 1px rgba(44, 230, 230, 0.7);
+  }
+  .text-stroke-p2 {
+    -webkit-text-stroke: 1px rgba(255, 61, 166, 0.7);
+  }
+  .glow-p1 {
+    box-shadow: 0 0 0 1px rgba(44, 230, 230, 0.4), 0 0 26px -6px rgba(44, 230, 230, 0.6);
+  }
+  .glow-p2 {
+    box-shadow: 0 0 0 1px rgba(255, 61, 166, 0.4), 0 0 26px -6px rgba(255, 61, 166, 0.6);
+  }
+  .glow-flare {
+    box-shadow: 0 0 40px -6px rgba(255, 226, 61, 0.55);
+  }
+  .clip-ticket {
+    clip-path: polygon(0 0, 100% 0, 100% 72%, 96% 100%, 0 100%, 4% 50%);
+  }
+}
+
+/* honor reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
